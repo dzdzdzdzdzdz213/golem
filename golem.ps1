@@ -1,3 +1,5 @@
+﻿#$OutputEncoding = [System.Text.UTF8Encoding]::new()
+[Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
 # golem - The Machine's Diary
 # At every boot, your machine wakes and writes.
 # From event logs, errors, and file changes, it composes
