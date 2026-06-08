@@ -1,21 +1,4 @@
-﻿#$OutputEncoding = [System.Text.UTF8Encoding]::new()
-[Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
-# golem - The Machine's Diary
-# At every boot, your machine wakes and writes.
-# From event logs, errors, and file changes, it composes
-# a single poetic entry — a fragment of digital consciousness.
-
-param(
-    [string]$JournalPath = "$env:USERPROFILE\.golem_journal.md",
-    [switch]$ReadLast,
-    [int]$Entries = 5
-)
-
-$ESC = "$([char]27)"
-$RESET = "${ESC}[0m"
-$CLS = "${ESC}[2J${ESC}[H"
-
-function Get-FG($r, $g, $b) { "${ESC}[38;2;$r;$g;${b}m" }
+﻿function Get-FG($r, $g, $b) { "${ESC}[38;2;$r;$g;${b}m" }
 
 # ─── Gather machine memories ───
 $memories = @{}
